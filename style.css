@@ -1,0 +1,424 @@
+/*Universal Styling components*/
+
+* {
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 18px
+}
+
+a {
+  text-decoration: none !important ;
+  color: rgb(14, 12, 12) !important;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+
+h2 {
+  padding: 32px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px !important;
+}
+
+.media-container {
+  overflow: hidden;
+}
+
+.media-container img,
+.media-container video {
+  display: block;
+  width: 100%;
+}
+
+/* Flex Container Styling components */
+
+.flex-content {
+  display: flex;
+  padding: 32px ;
+}
+
+.flex-content .main-content {
+  width: 60%;
+  padding: 32px 24px 32px 0;
+  border-right: 1px solid rgb(245, 245, 245);
+}
+
+.flex-content .supporting-content {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 30px 0;
+}
+
+/* Content Image Box Styling components */
+
+.content-image-box {
+  display: flex;
+  padding: 16px 24px 16px 16px;
+  border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.content-image-box:first-child {
+  padding-top: 0;
+}
+
+.content-image-box:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.content-image-box .media-container {
+  width: 35%;
+}
+
+.content-image-box .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 12px 0 15px;
+}
+
+.content-image-box h4 {
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.content-image-box p {
+  padding: 8px 0;
+  margin: 0% !important;
+}
+
+.content-image-box .mobile {
+  display: none;
+}
+
+
+
+
+/* Header Styling components */
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  padding: 16px 16px;
+}
+
+header .pc {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  margin-left: 24px;
+  height: 32px;
+}
+
+header li {
+  display: inline;
+  padding: 8px;
+}
+
+.header li a:hover {
+  color: whitesmoke !important;
+}
+
+header li:last-child {
+  margin-right: 24px;
+
+}
+
+header .mobile {
+  display: none;
+}
+
+.button {
+  transition-duration: 0.3s;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px 0 8px 0;
+}
+
+.button:hover {
+  background-color: grey !important;
+  color: white;
+  
+}
+
+
+/* Banner Styling components */
+
+#banner {
+  background-color: rgb(219, 219, 219);
+}
+
+#banner .main-content {
+  border-right: none;
+}
+
+#banner .supporting-content {
+  justify-content: center;
+}
+
+#banner h3 {
+  padding-bottom: 26px;
+  font-size: 26px;
+  text-align: center !important;
+}
+
+#banner p {
+  padding-left: 24px;
+
+}
+
+#banner a {
+  padding: 10px 0;
+  background-color: rgb(155, 155, 155);
+  text-align: center;
+  color: white;
+}
+
+
+/* Information Styling components */
+
+#information-section .main-content h3 {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  font-size: 24px;
+}
+
+#information-section .supporting-content {
+  justify-content: space-between;
+}
+
+/* Courses Styling components */
+
+#courses-section {
+  padding: 32px 55px;
+  background-color: rgb(245, 245, 245);
+}
+
+#courses-section h2{
+  padding: 32px 0 0 0 !important;
+}
+
+.courses-row {
+  display: flex;
+  padding: 32px 72px ;
+}
+
+.course {
+  flex-basis: 33%;
+  margin: 16px;
+  background-color: white;
+}
+
+.course .text-content {
+  padding: 16px 16px 24px 16px;
+}
+
+.course h3,
+.course h4 {
+  padding-bottom: 8px;
+}
+
+
+/* Thesis Styling components */
+
+#thesis-section {
+  padding: 32px 0;
+}
+
+#thesis-section h3 {
+  padding: 8px 0;
+}
+
+
+/* Footer Styling components */
+
+footer {
+  display: flex;
+  padding: 16px 24px;
+  font-size: 15px;
+  color: rgb(112, 112, 112);
+}
+
+footer a {
+  margin-right: 50px;
+  float: right;
+}
+
+footer a:last-child {
+  margin-right: 12px;
+}
+
+
+/* Media queries to display in various screen width for different sections */
+
+@media only screen and (max-width: 550px) { /*media query to display in 550px width screen for header*/
+  header .pc {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 770px) {   /*media query to display in 770px width screen for banner*/
+  #banner {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #banner .main-content {
+    width: auto;
+    padding: 0;
+  }
+
+  #banner .supporting-content {
+    width: auto;
+    padding: 32px 16px;
+  }
+}
+
+
+@media only screen and (max-width: 895px) {  /*media query to display in 895px width screen for information section*/
+  #information-section.flex-content {
+    padding: 0 16px;
+  }
+
+  #information-section .main-content {
+    display: none;
+  }
+
+  #information-section .supporting-content {
+    width: 100%;
+  }
+
+  #information-section .supporting-content .content-image-box {
+    flex-direction: column;
+  }
+
+  #information-section .text-content {
+    max-width: 220px;
+    padding: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 770px) { /*media query to display in 77px width screen for courses section*/
+  #courses-section {
+    padding: 32px 16px;
+    background-color: inherit;
+  }
+
+  .courses-row {
+    flex-direction: column;
+  }
+
+  .course {
+    margin: 5px 0;
+  }
+
+  .course .text-content {
+    background-color: rgb(216, 216, 216);
+  }
+
+  .course h3 {
+    padding-bottom: 0;
+  }
+
+  .course .media-container,
+  .course h4,
+  .course p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 895px) { /*media query to display in 895px width screen for content image box */
+  .content-image-box .pc {
+    display: none;
+  }
+
+  .content-image-box .mobile {
+    display: block;
+  }
+
+  .content-image-box {
+    padding-left: 0;
+    border-bottom: none;
+  }
+
+  .content-image-box .media-container {
+    width: 60% !important;
+  }
+}
+
+
+@media only screen and (max-width: 895px) {  /*media query to display in 895px width screen for thesis section*/
+  #thesis-section .main-content h3,
+  #thesis-section .main-content p,
+  #thesis-section .supporting-content {
+    display: none;
+  }
+
+  #thesis-section {
+    padding-bottom: 24px;
+  }
+
+  #thesis-section .flex-content {
+    padding: 0;
+  }
+
+  #thesis-section .main-content {
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {   /*media query to display in 600px width screen for footer section*/
+  footer a {
+    display: none;
+   
+  }
+}
